@@ -1,0 +1,11 @@
+.input-label {
+  padding: 1em;
+}
+.input-label label {
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}

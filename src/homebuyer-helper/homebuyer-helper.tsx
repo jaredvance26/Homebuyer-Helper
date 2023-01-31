@@ -1,23 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import "../css/main.css";
 
-import { Flex, Input } from "../components";
+// @ts-ignore
+import { HomebuyerHelperContent } from "./homebuyer-helper-content/homebuyer-helper-content.tsx";
 
 export const HomebuyerHelper = (): JSX.Element => {
-  const [rate, setRate] = useState<number>();
-
-  const onChange = (event) => {
-    setRate(event.target.value);
-  };
-
-  console.log({ rate });
   return (
-    <Flex>
-      <Input
-        key="interest-rates"
-        label="Interest Rates"
-        onChange={onChange}
-        value={rate}
-      />
-    </Flex>
+    <>
+      <h1>Homebuyer Helper</h1>
+      <HomebuyerHelperContent />
+    </>
   );
 };

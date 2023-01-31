@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Input } from "../../components";
+// @ts-ignore
+import { HelperInputs } from "./helper-inputs/helper-inputs.tsx";
+// @ts-ignore
+import { calculateMonthlyPayment } from "./etc/calculate-payment.ts";
 
 export const HomebuyerHelperContent = (): JSX.Element => {
   const [price, setPrice] = useState<number>();
@@ -8,7 +11,8 @@ export const HomebuyerHelperContent = (): JSX.Element => {
   const [amountDown, setAmountDown] = useState<number | undefined>(
     loanAmount ? loanAmount * 0.2 : undefined
   );
-  const [loanPeriod, setLoanPeriod] = useState<number>(30);
+  const [loanPeriod, setLoanPeriod] = useState<number>();
+  const [payment, setPayment] = useState<number | null>();
 
   const priceOnChange = (event) => {
     setPrice(event.target.value);
@@ -32,38 +36,35 @@ export const HomebuyerHelperContent = (): JSX.Element => {
     }
   }, [amountDown, price]);
 
+  useEffect(() => {
+    if (interestRate && loanPeriod && loanAmount) {
+      const pmt = parseFloat(
+        calculateMonthlyPayment(
+          (interestRate * 0.01) / 12,
+          loanPeriod * 12,
+          -loanAmount
+        )
+      );
+      setPayment(pmt);
+    } else {
+      setPayment(null);
+    }
+  }, [interestRate, loanAmount, loanPeriod]);
+
   return (
-    <Flex>
-      <Input
-        key="home-price"
-        label="Home Price"
-        onChange={priceOnChange}
-        value={price}
+    <>
+      <HelperInputs
+        priceOnChange={priceOnChange}
+        price={price}
+        rateOnChange={rateOnChange}
+        interestRate={interestRate}
+        amountDownOnChange={amountDownOnChange}
+        amountDown={amountDown}
+        loanPeriodOnChange={loanPeriodOnChange}
+        loanPeriod={loanPeriod}
+        loanAmount={loanAmount}
       />
-      <Input
-        key="interest-rates"
-        label="Interest Rates"
-        onChange={rateOnChange}
-        value={interestRate}
-      />
-      <Input
-        key="amount-down"
-        label="Amount Down"
-        onChange={amountDownOnChange}
-        value={amountDown}
-      />
-      <Input
-        key="loan-period"
-        label="Loan Period (years)"
-        onChange={loanPeriodOnChange}
-        value={loanPeriod}
-      />
-      <Input
-        key="loan-amount"
-        label="Loan Amount"
-        readOnly={true}
-        value={loanAmount}
-      />
-    </Flex>
+      {Boolean(payment) && `Payment: ${payment}`}
+    </>
   );
 };

@@ -7,10 +7,11 @@ interface inputInterface {
   onChange: () => void;
   readOnly?: boolean;
   value: string | number;
+  placeholder?: string;
 }
 
 export const Input = (props: inputInterface): JSX.Element => {
-  const { key, label, onChange, readOnly = false, value } = props;
+  const { key, label, onChange, readOnly = false, value, placeholder } = props;
 
   return (
     <div className="input-label">
@@ -21,6 +22,7 @@ export const Input = (props: inputInterface): JSX.Element => {
         onChange={onChange}
         value={value}
         readOnly={readOnly}
+        placeholder={placeholder}
       />
     </div>
   );

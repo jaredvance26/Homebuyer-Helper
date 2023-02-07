@@ -1,11 +1,46 @@
 .input-label {
   padding: 1em;
+  text-align: center;
 }
 .input-label label {
   display: block;
+}
+input {
+  padding: 5px;
 }
 
 .flex-container {
   display: flex;
   justify-content: space-around;
+  height: 300;
+}
+
+body {
+  min-height: 10000px;
+}
+/*---------TABLE ---------- */
+table {
+  margin: 2em auto 0 auto;
+  border-collapse: collapse;
+}
+
+table thead {
+  position: sticky;
+  top: 0px;
+  background-color: black;
+  color: white;
+}
+table thead tr th {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table tbody tr td {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: rgb(228, 228, 228);
 }

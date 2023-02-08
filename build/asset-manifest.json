@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Homebuyer-Helper/static/css/main.69920e3d.css",
-    "main.js": "/Homebuyer-Helper/static/js/main.58a00838.js",
+    "main.css": "/Homebuyer-Helper/static/css/main.590db767.css",
+    "main.js": "/Homebuyer-Helper/static/js/main.5a400e2b.js",
     "static/js/787.ae6927b2.chunk.js": "/Homebuyer-Helper/static/js/787.ae6927b2.chunk.js",
     "index.html": "/Homebuyer-Helper/index.html",
-    "main.69920e3d.css.map": "/Homebuyer-Helper/static/css/main.69920e3d.css.map",
-    "main.58a00838.js.map": "/Homebuyer-Helper/static/js/main.58a00838.js.map",
+    "main.590db767.css.map": "/Homebuyer-Helper/static/css/main.590db767.css.map",
+    "main.5a400e2b.js.map": "/Homebuyer-Helper/static/js/main.5a400e2b.js.map",
     "787.ae6927b2.chunk.js.map": "/Homebuyer-Helper/static/js/787.ae6927b2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69920e3d.css",
-    "static/js/main.58a00838.js"
+    "static/css/main.590db767.css",
+    "static/js/main.5a400e2b.js"
   ]
 }

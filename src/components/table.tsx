@@ -15,15 +15,15 @@ export const Table = (props: TableProps): JSX.Element => {
       <table>
         <thead>
           <tr>
-            {columns.map((column) => (
+            {columns.map((column: any) => (
               <th key={column.key}>{column.title}</th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {data.map((row) => (
+          {data.map((row: any) => (
             <tr>
-              {columns.map((column) => (
+              {columns.map((column: any) => (
                 <td key={column.key}>{row[column.key]}</td>
               ))}
             </tr>

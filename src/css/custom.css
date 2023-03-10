@@ -1,0 +1,24 @@
+.helper-inputs-container {
+  background-color: #303030;
+  padding: 15px;
+}
+
+.helper-input {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.summary {
+  background-color: #303030;
+  padding: 25px;
+  padding-top: 50px;
+}
+
+.summary div {
+  background-color: black;
+  border-radius: 15px;
+  padding: 25px;
+  font-size: 1.5em;
+  color: white;
+}

@@ -44,3 +44,51 @@ table tbody tr td {
 table tbody tr:nth-child(odd) {
   background-color: rgb(228, 228, 228);
 }
+div.flex-tooltip {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+div.tooltip-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+div.tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -65px;
+  width: 150px;
+  left: -72px;
+  padding: 10px;
+  font-size: small;
+}
+div.tooltip-content::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+div.tooltip img {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+div.tooltip-container:hover {
+  cursor: pointer;
+}
+
+div.tooltip-container:hover div.tooltip-content {
+  visibility: visible;
+}

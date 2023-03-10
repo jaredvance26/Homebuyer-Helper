@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 // @ts-ignore
 import { HelperInputs } from "./helper-inputs/helper-inputs.tsx";
 // @ts-ignore
@@ -10,6 +11,8 @@ import { calculateAmortizationData } from "./etc/calculate-amortization-content.
 import { Table } from "../../components";
 // @ts-ignore
 import { columns } from "../constants.ts";
+// @ts-ignore
+import { SummarySection } from "./summary-section/summary-section.tsx";
 
 export const HomebuyerHelperContent = (): JSX.Element => {
   const [price, setPrice] = useState<number>();
@@ -22,6 +25,10 @@ export const HomebuyerHelperContent = (): JSX.Element => {
   const [payment, setPayment] = useState<number | null>();
   const [amortizationData, setAmortizationData] = useState<amortizationData[]>(
     []
+  );
+
+  const interestPayments = amortizationData.map((data) =>
+    Number(data.interest.replace(/[^0-9.-]+/g, ""))
   );
 
   const priceOnChange = (event) => {
@@ -69,7 +76,7 @@ export const HomebuyerHelperContent = (): JSX.Element => {
     }
   }, [interestRate, loanAmount, loanPeriod, payment]);
 
-  console.table(amortizationData);
+  console.log({ interestPayments });
 
   return (
     <>
@@ -84,7 +91,9 @@ export const HomebuyerHelperContent = (): JSX.Element => {
         loanPeriod={loanPeriod}
         loanAmount={loanAmount}
       />
-      {Boolean(payment) && `Payment: ${payment}`}
+      {Boolean(payment) && (
+        <SummarySection payment={payment} interest={interestPayments} />
+      )}
       {Boolean(payment) && Boolean(amortizationData) && (
         <Table columns={columns} data={amortizationData} />
       )}

@@ -1,21 +1,21 @@
 // @ts-ignore
 import { amortizationData } from "../homebuyer-helper-content.ts";
 
-const currencyConversion = (number) => {
+export const currencyConversion = (number: number) => {
   return number
     ? number.toLocaleString("en-US", { style: "currency", currency: "USD" })
     : number;
 };
 
-const convertInt = (stringNumber) => {
+const convertInt = (stringNumber: string) => {
   return parseFloat(stringNumber.replace(/[^\d.-]/g, ""));
 };
 
 export const calculateAmortizationData = (
-  interestRate,
-  loanAmount,
-  loanPeriod,
-  payment
+  interestRate: number,
+  loanAmount: number,
+  loanPeriod: number,
+  payment: number
 ) => {
   let amortizationData: amortizationData[] = [];
 

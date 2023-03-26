@@ -1,15 +1,15 @@
 {
-  "files": {
-    "main.css": "/Homebuyer-Helper/static/css/main.590db767.css",
-    "main.js": "/Homebuyer-Helper/static/js/main.5a400e2b.js",
-    "static/js/787.ae6927b2.chunk.js": "/Homebuyer-Helper/static/js/787.ae6927b2.chunk.js",
-    "index.html": "/Homebuyer-Helper/index.html",
-    "main.590db767.css.map": "/Homebuyer-Helper/static/css/main.590db767.css.map",
-    "main.5a400e2b.js.map": "/Homebuyer-Helper/static/js/main.5a400e2b.js.map",
-    "787.ae6927b2.chunk.js.map": "/Homebuyer-Helper/static/js/787.ae6927b2.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.590db767.css",
-    "static/js/main.5a400e2b.js"
-  ]
+  "main.css": "/Homebuyer-Helper/static/css/main.27ca694b.chunk.css",
+  "main.js": "/Homebuyer-Helper/static/js/main.d894342a.chunk.js",
+  "main.js.map": "/Homebuyer-Helper/static/js/main.d894342a.chunk.js.map",
+  "runtime~main.js": "/Homebuyer-Helper/static/js/runtime~main.f9f7fd5e.js",
+  "runtime~main.js.map": "/Homebuyer-Helper/static/js/runtime~main.f9f7fd5e.js.map",
+  "static/js/2.bff0e79b.chunk.js": "/Homebuyer-Helper/static/js/2.bff0e79b.chunk.js",
+  "static/js/2.bff0e79b.chunk.js.map": "/Homebuyer-Helper/static/js/2.bff0e79b.chunk.js.map",
+  "static/js/3.937f6cc8.chunk.js": "/Homebuyer-Helper/static/js/3.937f6cc8.chunk.js",
+  "static/js/3.937f6cc8.chunk.js.map": "/Homebuyer-Helper/static/js/3.937f6cc8.chunk.js.map",
+  "index.html": "/Homebuyer-Helper/index.html",
+  "precache-manifest.39c25a157e70d89a9aa45673e067cb57.js": "/Homebuyer-Helper/precache-manifest.39c25a157e70d89a9aa45673e067cb57.js",
+  "service-worker.js": "/Homebuyer-Helper/service-worker.js",
+  "static/css/main.27ca694b.chunk.css.map": "/Homebuyer-Helper/static/css/main.27ca694b.chunk.css.map"
 }

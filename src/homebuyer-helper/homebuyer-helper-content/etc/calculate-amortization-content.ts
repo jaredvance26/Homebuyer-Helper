@@ -7,7 +7,7 @@ export const currencyConversion = (number: number) => {
     : number;
 };
 
-const convertInt = (stringNumber: string) => {
+export const convertInt = (stringNumber: string) => {
   return parseFloat(stringNumber.replace(/[^\d.-]/g, ""));
 };
 

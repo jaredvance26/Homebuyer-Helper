@@ -22,3 +22,22 @@
   font-size: 1.5em;
   color: white;
 }
+
+button.download {
+  display: block;
+  max-width: 500px;
+  font-size: 1em;
+  margin: 25px auto;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: all 500ms;
+}
+
+button.download:hover {
+  cursor: pointer;
+  color: black;
+  background-color: lightgray;
+}

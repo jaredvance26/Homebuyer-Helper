@@ -14,6 +14,10 @@ import { columns } from "../constants.ts";
 // @ts-ignore
 import { SummarySection } from "./summary-section/summary-section.tsx";
 
+import { downloadCSV } from "./etc/download-as-csv.js";
+
+import "../../css/custom.css";
+
 export const HomebuyerHelperContent = (): JSX.Element => {
   const [price, setPrice] = useState<number>();
   const [interestRate, setInterestRate] = useState<number>();
@@ -76,8 +80,6 @@ export const HomebuyerHelperContent = (): JSX.Element => {
     }
   }, [interestRate, loanAmount, loanPeriod, payment]);
 
-  console.log({ interestPayments });
-
   return (
     <>
       <HelperInputs
@@ -95,7 +97,12 @@ export const HomebuyerHelperContent = (): JSX.Element => {
         <SummarySection payment={payment} interest={interestPayments} />
       )}
       {Boolean(payment) && Boolean(amortizationData) && (
-        <Table columns={columns} data={amortizationData} />
+        <>
+          <button className="download" onClick={downloadCSV}>
+            Download as CSV
+          </button>
+          <Table columns={columns} data={amortizationData} />
+        </>
       )}
     </>
   );

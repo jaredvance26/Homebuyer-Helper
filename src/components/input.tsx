@@ -36,7 +36,7 @@ export const Input = (props: inputInterface): JSX.Element => {
         </div>
       </label>
       <input
-        type="text"
+        type="number"
         name={key}
         onChange={onChange}
         value={value}

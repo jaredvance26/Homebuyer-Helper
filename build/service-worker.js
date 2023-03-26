@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Homebuyer-Helper/precache-manifest.7f18ccd3013dbf0cbf32f7cea562ad03.js"
+  "/Homebuyer-Helper/precache-manifest.39c25a157e70d89a9aa45673e067cb57.js"
 );
 
 workbox.clientsClaim();
